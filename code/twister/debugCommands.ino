@@ -14,22 +14,6 @@
 //    You should have received a copy of the GNU General Public License
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
-void printPhotocellInfo() {
-
-  for (int p = 0; p < 2; p++) {
-
-    Serial.print("Photocell ");
-    Serial.print(p);
-    Serial.print(" ");
-    Serial.print(photocells.values[p]);
-    Serial.print(" ");
-    Serial.println(photocells.thresh[p]);
-
-  }
-
-}
-
 void printVariables() {
 
   Serial.print(twister.totalTurns); 
@@ -40,8 +24,5 @@ void printVariables() {
   Serial.print(" ");
   Serial.print(inputs.buttonState); 
   Serial.print(" ");
-  Serial.print(photocells.counter); 
-  Serial.print(" ");
-
 }
 

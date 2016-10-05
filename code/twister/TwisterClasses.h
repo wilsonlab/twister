@@ -41,8 +41,8 @@ class Inputs
   private:
     int _buttonPin, _knobPin1, _knobPin2;
 };
-    
-    
+
+
 class StateTracker
 {
   public:
@@ -50,36 +50,11 @@ class StateTracker
     boolean isUpdated;
     boolean isTurning;
     boolean isTurningFWD;
-    
+
     StateTracker();
     void respondToButton();
 };
-    
-    
-class Photocells
-{
-  public:
-    int values[2];
-    int thresh[2];
-    unsigned int counter;
-    
-    Photocells(int pin1, int pin2);
-    
-    int update(boolean dir, long time);
-    
-  private:
-    int pins[2];
-    int nValues;
-    int history1[25];
-    int history2[25];
-    int maxVal[2];
-    int minVal[2];
-    int quarterTurns;
-    boolean canBeTriggered[2];
-    unsigned long triggerTime[2];
-    void checkThreshold();
-};
+
+
 
 #endif
-
-

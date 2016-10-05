@@ -17,9 +17,9 @@
 void updateServo() {
 
   // settings for rotation speed
-  const int fwdspeed = 1000;
+  const int fwdspeed = 10000;
   const int stopped = 1500;
-  const int revspeed = 2000;
+  const int revspeed = 10000;
 
   // set rotation status
   if (!twister.isTurning) {
@@ -62,11 +62,5 @@ void updateServo() {
     
     inputs.isUpdated = true;
     
-     updateEEPROM();
-
-  }
-
 }
-
-
-
+}
